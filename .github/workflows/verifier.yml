@@ -1,0 +1,13 @@
+name: Index.html Verifier
+
+on: [push]
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Verify index.html exists
+        run: test -f Site/index.html
